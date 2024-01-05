@@ -1,10 +1,12 @@
+require_relative '../lib/index'
+
 if ARGV.size < 1
   puts "USAGE: ruby scripts/generate_type_by_gen.rb GEN_ID"
+  Mapper.list_generations
   exit
 end
 
 require 'json'
-require_relative '../lib/index'
 
 PokeAPI::Types.load
 PokeAPI::TypeEfficacy.load

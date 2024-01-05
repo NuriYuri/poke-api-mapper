@@ -39,10 +39,10 @@ module Mapper
       end
     end
 
+    # @return [Array<Array<String>>]
     def get_type_texts
-      languages = PokeAPI::Languages::DATA.reject { |l| l.id == 2 || l.id > 9 }
-      language_ids = languages.map { |l| l.id }
-      header = languages.map { |l| l.id == 1 ? 'kana' : l.iso639 }
+      language_ids, header = Mapper.get_languages
+
       return [
         header,
         *PokeAPI::Types::DATA.map do |t|

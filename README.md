@@ -24,3 +24,5 @@ This allows other script to run faster by not having to parse CSV files.
 
 - `ruby scripts/generate_type_by_gen.rb GEN_ID`: generates the Pokémon Studio types into `out/types` based on the generation you want.
 - `ruby scripts/generate_type_text.rb`: Generate the CSV file containing the type names in the available locales (in PSDK format).
+- `ruby scripts/generate_abilities_by_gen.rb GEN_ID [--no-unofficial]`: generates the Pokémon Studio abilities into `out/abilities` based on the generation you want.
+- `ruby scripts/generate_type_text.rb VER_ID`: Generate the CSV file containing the ability names and description in the available locales (in PSDK format) based on the version group you want.
